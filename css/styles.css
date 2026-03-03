@@ -27,8 +27,7 @@ body {
   margin: 0;
   font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   background:
-    radial-gradient(1200px 700px at 20% 0%, rgba(100,181,246,0.18), transparent 60%),
-    radial-gradient(1200px 700px at 90% 10%, rgba(243,156,18,0.12), transparent 55%),
+    radial-gradient(1000px 600px at 50% -200px, rgba(100,181,246,0.18), transparent 70%),
     var(--bg);
   color: var(--text);
 }
@@ -515,5 +514,63 @@ h2 {
   .hero .hero-media img {
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+}
+
+/* ===== Reviews page mobile fixes ===== */
+@media (max-width: 768px) {
+  /* General card spacing on mobile */
+  .card.pad {
+    padding: 16px !important;
+  }
+
+  /* Make review list single column and add breathing room */
+  .review-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Review headings smaller + cleaner */
+  .review-grid h3,
+  .review-grid h2 {
+    font-size: 1.15rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Meta line tighter */
+  .review-meta {
+    font-size: 0.92rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Quote text: wrap correctly + reduce huge vertical spacing */
+  .quote {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  /* If your quote has extra spacing from <p> defaults */
+  .quote p {
+    margin: 10px 0 0 !important;
+  }
+
+  /* CTA section (Want yours next?) - keep it compact */
+  .section .card.pad h2 {
+    font-size: 1.35rem !important;
+  }
+
+  /* Buttons full width (optional but looks better on mobile) */
+  .section .btn,
+  .card .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Footer spacing */
+  .site-footer {
+    padding: 18px 0 28px !important;
+    font-size: 0.95rem;
   }
 }
